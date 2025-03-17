@@ -20,7 +20,11 @@ from aiogram.types import FSInputFile
 
 
 # ➤ Bot tokenini yozing
-TOKEN = "1948220576:AAFIXNvX7m2-lM-j4pY6j6y-5qcwt41bHuA"
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+TOKEN = os.getenv("TOKEN")
 
 # ➤ Qurilma aniqlash
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
